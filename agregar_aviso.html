@@ -36,31 +36,31 @@
         <fieldset> 
             <legend> ¿Dónde? </legend>
             
-            <label for="Región"> Región: </label>
-            <select name="Región" id="Región">
+            <label for="regionMenu"> Región: </label>
+            <select name="Región" id="regionMenu" onchange = "updateComunaMenu(this.value)">
                 <option value=""> Seleccione una región </option>
-                <option value=""> Región Metropolitana </option>
-                <option value=""> Arica y Parinacota </option>
-                <option value=""> Tarapacá </option>
-                <option value=""> Antofagasta </option>
-                <option value=""> Atacama </option>
-                <option value=""> Coquimbo </option>
-                <option value=""> Valparaiso </option>
-                <option value=""> O'Higgins </option>
-                <option value=""> Maule </option>
-                <option value=""> Ñuble </option>
-                <option value=""> Biobío </option>
-                <option value=""> La Araucanía </option>
-                <option value=""> Los Ríos </option>
-                <option value=""> Los Lagos </option>
-                <option value=""> Aysén </option>
-                <option value=""> Magallanes y la Antártica Chilena </option>
+                <option value= "Región_Metropolitana"> Región Metropolitana </option>
+                <option value= "Arica_y_Parinacota" > Arica y Parinacota </option>
+                <option value= "Tarapacá"> Tarapacá </option>
+                <option value= "Antofagasta"> Antofagasta </option>
+                <option value= "Atacama" > Atacama </option>
+                <option value= "Coquimbo" > Coquimbo </option>
+                <option value= "Valparaiso"> Valparaiso </option>
+                <option value= "OHiggins" > O'Higgins </option>
+                <option value= "Maule" > Maule </option>
+                <option value= "Ñuble"> Ñuble </option>
+                <option value= "Biobío"> Biobío </option>
+                <option value= "La_Araucanía"> La Araucanía </option>
+                <option value= "Los_Ríos" > Los Ríos </option>
+                <option value= "Los_Lagos" > Los Lagos </option>
+                <option value= "Aysén" > Aysén </option>
+                <option value= "Magallanes_y_la_Antártica_Chilena"> Magallanes y la Antártica Chilena </option>
             </select>
             <br><br> 
-            <label for="Comuna"> Comuna: </label>
-            <select name="Comuna" id="Comuna">
+            <label for="comunaMenu"> Comuna: </label>
+            <select name="Comuna" id="comunaMenu" disabled>
                 <option value=""> Seleccione una comuna </option>
-                 <!--Hacer el javascript para que queden las comunas según región-->
+                 <!--Terminar el javascript para que queden las comunas según región -->
             </select>
             <br><br> 
             <label for="Sector"> Sector: </label>
