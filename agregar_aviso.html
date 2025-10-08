@@ -10,6 +10,7 @@
     <h1> Agrega tu aviso! </h1>
     <!--Javascript útiles -->
     <script src="agregar_aviso_dynamics.js"></script>
+    <script src="agregar_aviso_validation.js"></script>
         <nav class="navbar">
         <div class="navbar_container">
             <a href="/" id="navbar_logo"></a>
@@ -58,14 +59,16 @@
                 <option value= "Aysén" > Aysén </option>
                 <option value= "Magallanes_y_la_Antártica_Chilena"> Magallanes y la Antártica Chilena </option>
             </select>
+            <span id="errorRegionMessage" style="color: red; display: none;"></span>
             <br><br> 
             <label for="comunaMenu"> Comuna: </label>
             <select name="Comuna" id="comunaMenu" disabled>
                 <option value=""> Seleccione una comuna </option>
             </select>
+            <span id="errorComunaMessage" style="color: red; display: none;"></span>
             <br><br> 
             <label for="Sector"> Sector: </label>
-            <input type="text" name="Sector" id="Sector">
+            <input type="text" name="Sector" id="Sector" maxlength="100">
          </fieldset>
             
          <br>
@@ -74,7 +77,8 @@
             <legend> ¿Contacto de esta publicación? </legend>
             
             <label for="Nombre"> Nombre: </label>
-            <input type="text" name="Nombre" id="Nombre" required>
+            <input type="text" name="Nombre" id="Nombre" maxlength="200">
+            <span id="errorNombreMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="email"> email: </label>
             <input type="email" name="email" id="email" required>
@@ -130,7 +134,7 @@
             <!--Falta que se pueda agregar múltiples fotos-->
         </fieldset>
         <br>
-        <button type="submit"> Agregar este aviso de adopción </button>
+        <button type="submit" onclick="validateAll()"> Agregar este aviso de adopción </button>
     </Form>
     <script src="agregar_aviso_validation.js"></script>
 </body>
