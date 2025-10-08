@@ -82,6 +82,7 @@
             <br><br>
             <label for="email"> email: </label>
             <input type="email" name="email" id="email" required>
+            <span id="errorEmailMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="Numero_de_celular"> Numero de celular: </label>
             <input type="tel" name="Numero_de_celular" id="Numero_de_celular">
@@ -95,7 +96,7 @@
                 <option value=""> instagram </option>
                 <option value=""> otra </option>
             </select>
-            <!--Hacer el código para que salga el input de texto para el id de contacto o url-->
+            <!--Hacer el código en dynamics para que salga el input de texto para el id de contacto o url-->
         </fieldset>
 
         <br>
@@ -105,16 +106,19 @@
             
             <label for="Tipo"> Tipo: </label>
             <select name="Tipo" id="Tipo">
-                <option value="Seleccione"> Seleccione el tipo de animal </option>
+                <option value=""> Seleccione el tipo de animal </option>
                 <option value="Perro"> Perro </option>
                 <option value="Gato"> Gato </option>
             </select>
+            <span id="errorTipoMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="Cantidad"> Cantidad: </label>
-            <input type="number" name="Cantidad" id="Cantidad" required>
+            <input type="number" name="Cantidad" id="Cantidad" min="1">
+            <span id="errorCantidadMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="Edad"> Edad: </label>
-            <input type="number" name="Edad" id="Edad" required>
+            <input type="number" name="Edad" id="Edad" min="1">
+            <span id="errorEdadMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="Unidad_Medida_Edad"> Unidad Medida Edad: </label>
             <select name="Unidad_Medida_Edad" id="Unidad_Medida_Edad">

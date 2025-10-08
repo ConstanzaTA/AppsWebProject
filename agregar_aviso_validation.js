@@ -6,6 +6,10 @@ function validateAll(){
     validateRegion();
     validateComuna();
     validateNombre();
+    validateEmail();
+    validateTipo();
+    validateCantidad();
+    validateEdad();
 }
 
 //-------------------------------------- SECCIÓN DÓNDE --------------------
@@ -75,27 +79,86 @@ function validateNombre() {
 }
 // RECUERDA: falta agregar validación que contenga al menos 3 caracteres
 
+//EMAIL
+function validateEmail() {
+  const email = document.getElementById("email");
+  const emailLimpio = email.value.trim(); // Get value and remove whitespace
+  const errorEmailMessage = document.getElementById("errorEmailMessage");
 
-
-/*
-
-
-<input type="text" id="myInput">
-<button onclick="validateInput()">Submit</button>
-
-<script>
-function validateInput() {
-  const inputElement = document.getElementById('myInput');
-  const inputValue = inputElement.value.trim(); // Get value and remove whitespace
-
-  if (inputValue === "") {
-    alert("Input cannot be empty!");
-    // Optionally, prevent form submission or add visual feedback
-    return false; // Prevent further action if validation fails
+  if (emailLimpio == "") {
+    errorEmailMessage.textContent = "Debe colocar un email";
+    errorEmailMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
   } else {
-    alert("Input is valid!");
-    // Proceed with form submission or other actions
+    // campo completado correctamente
+    errorEmailMessage.textContent = ""; // Quitar mensaje
+    errorEmailMessage.style.display = "none";
     return true;
   }
 }
-</script>*/
+
+//TELÉFONO: opcional así que verificar en caso que se ingrese que cumpla con el fromato
+
+//CONTACTAR POR: opcional opcional. Máximo 5. El input de información de ID o URL
+//debe permitir mínimo 4 caracteres y máximo 50.
+
+
+//----------------------------- SECCIÓN MASCOTA ---------------------------
+
+// TIPO
+
+function validateTipo() { 
+  const tipo = document.getElementById("Tipo");
+  const errorTipoMessage = document.getElementById("errorTipoMessage");
+
+  if (tipo.value == "") {
+    errorTipoMessage.textContent = "Debe seleccionar el tipo de animal";
+    errorTipoMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
+  } else {
+    // campo completado correctamente
+    errorTipoMessage.textContent = ""; // Quitar mensaje
+    errorTipoMessage.style.display = "none";
+    return true;
+  }
+}
+
+// CANTIDAD 
+
+function validateCantidad() { 
+  const cantidad = document.getElementById("Cantidad");
+  const errorCantidadMessage = document.getElementById("errorCantidadMessage");
+
+  if (cantidad.value == "") {
+    errorCantidadMessage.textContent = "Debe seleccionar una cantidad";
+    errorCantidadMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
+  } else {
+    // campo completado correctamente
+    errorCantidadMessage.textContent = ""; // Quitar mensaje
+    errorCantidadMessage.style.display = "none";
+    return true;
+  }
+}
+
+// EDAD 
+
+function validateEdad() { 
+  const edad = document.getElementById("Edad");
+  const errorEdadMessage = document.getElementById("errorEdadMessage");
+
+  if (edad.value == "") {
+    errorEdadMessage.textContent = "Debe seleccionar una edad";
+    errorEdadMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
+  } else {
+    // campo completado correctamente
+    errorEdadMessage.textContent = ""; // Quitar mensaje
+    errorEdadMessage.style.display = "none";
+    return true;
+  }
+}
