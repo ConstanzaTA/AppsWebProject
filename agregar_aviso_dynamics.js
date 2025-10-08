@@ -2,7 +2,7 @@
 agregar aviso page
 */
 
-//menú de comunas dependiente de la región 
+//Comunas de cada región 
 const data = {
 
     Región_Metropolitana: ["Colina", "Lampa", "Tiltil", "Puente Alto", "San José de Maipo", "Pirque", "Buin", "Calera de Tango", "Paine", "San Bernardo",
@@ -42,12 +42,12 @@ const data = {
         "Timaukel", "Torres del Paine"],
 };
 
-function updateComunaMenu(regionSelection) {
+function updateComunaMenu(regionMenu) {
   const comunaMenu = document.getElementById("comunaMenu");
   comunaMenu.innerHTML = '<option value="">-- Select --</option>'; // Clear existing options
 
-  if (regionSelection) {
-    const items = data[regionSelection];
+  if (regionMenu) {
+    const items = data[regionMenu];
     items.forEach((item) => {
       const option = document.createElement("option");
       option.value = item.toLowerCase();
