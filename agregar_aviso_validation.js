@@ -10,6 +10,8 @@ function validateAll(){
     validateTipo();
     validateCantidad();
     validateEdad();
+    validateUnidadMedidaEdad();
+    validateFechaDisponible();
 }
 
 //-------------------------------------- SECCIÓN DÓNDE --------------------
@@ -162,3 +164,48 @@ function validateEdad() {
     return true;
   }
 }
+
+// UNIDAD DE MEDIDA 
+
+function validateUnidadMedidaEdad() { 
+  const ume = document.getElementById("Unidad_Medida_Edad");
+  const errorUMEMessage = document.getElementById("errorUMEMessage");
+
+  if (ume.value == "") {
+    errorUMEMessage.textContent = "Debe seleccionar una unidad de medida";
+    errorUMEMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
+  } else {
+    // campo completado correctamente
+    errorUMEMessage.textContent = ""; // Quitar mensaje
+    errorUMEMessage.style.display = "none";
+    return true;
+  }
+}
+
+// FECHA DISPONIBLE PARA ENTREGA
+
+function validateFechaDisponible() { 
+  const fechaDisponible = document.getElementById("Fecha_disponible");
+  const errorFechaDisponibleMessage = document.getElementById("errorFechaDisponibleMessage");
+
+  if (fechaDisponible.value == "") {
+    errorFechaDisponibleMessage.textContent = "Debe seleccionar una fecha";
+    errorFechaDisponibleMessage.style.display = "inline";
+    // campo vacío, no se puede mandar el forms
+    return false; 
+  } else {
+    // campo completado correctamente
+    errorFechaDisponibleMessage.textContent = ""; // Quitar mensaje
+    errorFechaDisponibleMessage.style.display = "none";
+    return true;
+  }
+}
+
+// DESCRIPCIÓN
+// es opcional y solo debe cumplir el area lo cual se definió en HTML
+
+// FOTOS
+
+// pendiente 

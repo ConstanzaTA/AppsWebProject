@@ -81,7 +81,7 @@
             <span id="errorNombreMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="email"> email: </label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" >
             <span id="errorEmailMessage" style="color: red; display: none;"></span>
             <br><br>
             <label for="Numero_de_celular"> Numero de celular: </label>
@@ -122,13 +122,14 @@
             <br><br>
             <label for="Unidad_Medida_Edad"> Unidad Medida Edad: </label>
             <select name="Unidad_Medida_Edad" id="Unidad_Medida_Edad">
-                <option value="Seleccione"> Seleccione la unidad de medida de edad </option>
+                <option value=""> Seleccione la unidad de medida de edad </option>
                 <option value="meses"> meses </option>
                 <option value="años"> años </option>
             </select>
+            <span id="errorUMEMessage" style="color: red; display: none;"></span>
             <br><br>
-            <label for="Fecha_disponible_para_entrega"> Fecha disponible para entrega: </label>
-            <input type="datetime-local" name="Fecha_disponible_para_entrega" id="Fecha_disponible_para_entrega" required>
+            <label for="Fecha_disponible"> Fecha disponible para entrega: </label>
+            <input type="datetime-local" name="Fecha_disponible" id="Fecha_disponible">
             <br><br>
             <label for="Descripción"> Descripción: </label>
             <textarea name="Descripción" id="Descripción" cols="50" rows="10"></textarea>
