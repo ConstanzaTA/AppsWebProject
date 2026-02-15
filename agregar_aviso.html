@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> Agrega tu aviso! </h1>
+        <nav class="navbar">
+        <div class="navbar_container">
+            <a href="/" id="navbar_logo"></a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="index.html" class="navbar_links"> Home </a>
+                </li>
+                <li class="navbar_item">
+                    <a href="agregar_aviso.html" class="navbar_links"> Agregar aviso de adopción </a>
+                </li>
+                 <li class="navbar_item">
+                    <a href="listado_adopciones.html" class="navbar_links"> Ver listado de adopciones </a>
+                </li>
+                 <li class="navbar_item">
+                    <a href="estadisticas.html" class="navbar_links"> Estadísticas </a>
+                </li> 
+            </ul>
+        </div>
+    </nav>
+    <Form>
+        <fieldset> 
+            <legend> ¿Dónde? </legend>
+            
+            <label for="Región"> Región: </label>
+            <select name="Región" id="Región">
+                <option value=""> Seleccione una región </option>
+                <option value=""> Región Metropolitana </option>
+                <option value=""> Valparaiso </option>
+                <!--Tengo que poner el resto de las regiones pero es añadir más opciones-->
+            </select>
+            <br><br> 
+            <label for="Comuna"> Comuna: </label>
+            <select name="Comuna" id="Comuna">
+                <option value=""> Seleccione una comuna </option>
+                 <!--Hacer el javascript para que queden las comunas según región-->
+            </select>
+            <br><br> 
+            <label for="Sector"> Sector: </label>
+            <input type="text" name="Sector" id="Sector">
+         </fieldset>
+            
+         <br>
+
+        <fieldset>  
+            <legend> ¿Contacto de esta publicación? </legend>
+            
+            <label for="Nombre"> Nombre: </label>
+            <input type="text" name="Nombre" id="Nombre" required>
+            <br><br>
+            <label for="email"> email: </label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="Numero_de_celular"> Numero de celular: </label>
+            <input type="tel" name="Numero_de_celular" id="Numero_de_celular">
+            <br><br>
+            <label for="Contactar"> Contactar por: </label>
+            <select name="Contactar" id="Contactar">
+                <option value=""> Seleccione un medio para contactarle </option>
+                <option value=""> whatsapp </option>
+                <option value=""> telegram </option>
+                <option value=""> X </option>
+                <option value=""> instagram </option>
+                <option value=""> otra </option>
+            </select>
+            <!--Hacer el código para que salga el input de texto para el id de contacto o url-->
+        </fieldset>
+
+        <br>
+
+        <fieldset> 
+            <legend> ¿Qué mascota ofrece en adopción? </legend>
+            
+            <label for="Tipo"> Tipo: </label>
+            <select name="Tipo" id="Tipo">
+                <option value="Seleccione"> Seleccione el tipo de animal </option>
+                <option value="Perro"> Perro </option>
+                <option value="Gato"> Gato </option>
+            </select>
+            <br><br>
+            <label for="Cantidad"> Cantidad: </label>
+            <input type="number" name="Cantidad" id="Cantidad" required>
+            <br><br>
+            <label for="Edad"> Edad: </label>
+            <input type="number" name="Edad" id="Edad" required>
+            <br><br>
+            <label for="Unidad_Medida_Edad"> Unidad Medida Edad: </label>
+            <select name="Unidad_Medida_Edad" id="Unidad_Medida_Edad">
+                <option value="Seleccione"> Seleccione la unidad de medida de edad </option>
+                <option value="meses"> meses </option>
+                <option value="años"> años </option>
+            </select>
+            <br><br>
+            <label for="Fecha_disponible_para_entrega"> Fecha disponible para entrega: </label>
+            <input type="datetime-local" name="Fecha_disponible_para_entrega" id="Fecha_disponible_para_entrega" required>
+            <br><br>
+            <label for="Descripción"> Descripción: </label>
+            <input type="text" name="Descripción" id="Descripción">
+            <br><br>
+            <label for="Foto"> Foto: </label>
+            <input type="file" name="Foto" id="Foto">
+            <!--Falta que se pueda agregar múltiples fotos-->
+        </fieldset>
+        <br>
+        <button type="submit"> Agregar este aviso de adopción </button>
+    </Form>
+    <script src="agregar_aviso_validation.js"></script>
+</body>
+</html>
